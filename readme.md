@@ -10,7 +10,7 @@
 
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/TiD1rAXVbB4/0.jpg)](https://youtu.be/TiD1rAXVbB4)
 
-### Project API: [Coming Soon](https://github.com/mdanisurrahmanrony/MERN-Stack-Ecommerce)
+### Project API: [https://documenter.getpostman.com/view/13756972/TzeTHUbs](https://documenter.getpostman.com/view/13756972/TzeTHUbs)
 
 ### Env Variables
 
