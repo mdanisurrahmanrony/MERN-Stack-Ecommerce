@@ -1,0 +1,816 @@
+{
+	"info": {
+		"_postman_id": "55308219-f23c-443c-9969-1287bb257cab",
+		"name": "MERN E-commerce",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Get Products Number",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{DOMAIN}}/api//products/total",
+							"host": [
+								"{{DOMAIN}}"
+							],
+							"path": [
+								"api",
+								"",
+								"products",
+								"total"
+							]
+						},
+						"description": "Get the total number of products."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Products by Count",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{DOMAIN}}/api/products/4",
+							"host": [
+								"{{DOMAIN}}"
+							],
+							"path": [
+								"api",
+								"products",
+								"4"
+							]
+						},
+						"description": "Get products using number."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{DOMAIN}}/api/product/microsoft-surface-pro",
+							"host": [
+								"{{DOMAIN}}"
+							],
+							"path": [
+								"api",
+								"product",
+								"microsoft-surface-pro"
+							]
+						},
+						"description": "Get single product using slug."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Products with Pagination",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{DOMAIN}}/api//products",
+							"host": [
+								"{{DOMAIN}}"
+							],
+							"path": [
+								"api",
+								"",
+								"products"
+							]
+						},
+						"description": "Get products with pagination. Here particular number of products are shown in each page."
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Related Products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{DOMAIN}}/api/product/related/60ba806c837ff30004771fb2",
+							"host": [
+								"{{DOMAIN}}"
+							],
+							"path": [
+								"api",
+								"product",
+								"related",
+								"60ba806c837ff30004771fb2"
+							]
+						},
+						"description": "Get all related products using product id."
+					},
+					"response": []
+				},
+				{
+					"name": "Create Product - Admin",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authtoken",
+								"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImFiMGNiMTk5Zjg3MGYyOGUyOTg5YWI0ODFjYzJlNDdlMGUyY2MxOWQiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiTWQuIEFuaXN1ciBSYWhtYW4gUm9ueSIsInBpY3R1cmUiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS0vQU9oMTRHZ20tdVY0OXN0MFJCMVE4U1VKN3dEdkstbV9ScnkwemNzdlRXNFRBdz1zOTYtYyIsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS9tZXJuZWNvbW1lcmNlLTQ2Y2IzIiwiYXVkIjoibWVybmVjb21tZXJjZS00NmNiMyIsImF1dGhfdGltZSI6MTYyMzMxOTkxOCwidXNlcl9pZCI6IlRycUFCZ0J4bVVWRVc5NElJa1VRNGU5WjVFODMiLCJzdWIiOiJUcnFBQmdCeG1VVkVXOTRJSWtVUTRlOVo1RTgzIiwiaWF0IjoxNjIzNDAyODQxLCJleHAiOjE2MjM0MDY0NDEsImVtYWlsIjoiYW5pc3VycmFobWFucm9ueTNAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZ29vZ2xlLmNvbSI6WyIxMDQ0NzYzNjc5Njk3NjUzMTc3MTgiXSwiZW1haWwiOlsiYW5pc3VycmFobWFucm9ueTNAZ21haWwuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoiZ29vZ2xlLmNvbSJ9fQ.LpEvgNOtHzlS_YYA9YAuusVE02ZR3x4v1QL2GWe7I4HNhQHmJoupQnHUk8lIE70SCgIF1tu3yjeUck3uNmZ69-s2jgfzXeMXu_KB50l-2cnK36eK-vb6SUgMexYybNuxrJuE4URVeZuO55OZamE1UWu1LNTFjfwR8AU-eH4zKLJjIMXLzXy0uMKrjEDHILDU2i3JRHmqZefqmBoXPrQMZy1QKO9bytw7U5MZwkv3GIJMvr7ZnduLTvy3vqRbjFRmkFSSQSIBIq3WDKyZLn0c5c0V6WBCXuRbyn6EpO_KPtvA6vsYmb5wg1zqY93x-bkaMwBKx9v3gVthydc9jrFKrA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Microsoft New Laptop\",\r\n    \"description\": \"Microsoft New Laptop Description\",\r\n    \"price\": 6280,    \r\n    \"shipping\": \"Yes\",\r\n    \"quantity\": 226,\r\n    \"color\": \"Black\",\r\n    \"brand\": \"Microsoft\",\r\n    \"category\": \"60ba555f5041b00004d0fcd3\",\r\n    \"subs\": [\"60ba58175041b00004d0fcdd\",\"60ba58595041b00004d0fcde\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{DOMAIN}}/api/product",
+							"host": [
+								"{{DOMAIN}}"
+							],
+							"path": [
+								"api",
+								"product"
+							]
+						},
+						"description": "Create new product by admin."
+					},
+					"response": []
+				},
+				{
+					"name": "Update Product - Admin",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "authtoken",
+								"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImFiMGNiMTk5Zjg3MGYyOGUyOTg5YWI0ODFjYzJlNDdlMGUyY2MxOWQiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiTWQuIEFuaXN1ciBSYWhtYW4gUm9ueSIsInBpY3R1cmUiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS0vQU9oMTRHZ20tdVY0OXN0MFJCMVE4U1VKN3dEdkstbV9ScnkwemNzdlRXNFRBdz1zOTYtYyIsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS9tZXJuZWNvbW1lcmNlLTQ2Y2IzIiwiYXVkIjoibWVybmVjb21tZXJjZS00NmNiMyIsImF1dGhfdGltZSI6MTYyMzMxOTkxOCwidXNlcl9pZCI6IlRycUFCZ0J4bVVWRVc5NElJa1VRNGU5WjVFODMiLCJzdWIiOiJUcnFBQmdCeG1VVkVXOTRJSWtVUTRlOVo1RTgzIiwiaWF0IjoxNjIzNDA2NjE0LCJleHAiOjE2MjM0MTAyMTQsImVtYWlsIjoiYW5pc3VycmFobWFucm9ueTNAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZ29vZ2xlLmNvbSI6WyIxMDQ0NzYzNjc5Njk3NjUzMTc3MTgiXSwiZW1haWwiOlsiYW5pc3VycmFobWFucm9ueTNAZ21haWwuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoiZ29vZ2xlLmNvbSJ9fQ.ab0Pfuz53W_Aa9CwIdMDdCf8pQeZUmnG7pdWd_DauR5w1E9SvxXX7jTvOjSAgG3FGmZcmJkcUYjoZ8w4BEN0U_jnhIm1CSB4M46qdgkncsDBAKyuRtjisgUoHgHw4nhgmFuQPn7W_iJxW9kNDkOVP3iKkPlInF74hVqFpApQZBmNTxSdNEbFLfGoPEN5N_tUvby_kAxk6l_mLVp8Xys_65p57OqRm_7_Cs4vShDnNSfRHSZsvyQ1VajuDIGgbXy3gtRqROVN-gLNePRfwhEQwogFBfoYmuGRKsjD4WlmNOw1oc6Czt8-GN6ox2NqUNntDiHlo0rL_HTXvnIwV0L-8g",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Microsoft Updated Laptop\",\r\n    \"description\": \"Microsoft Updated Laptop Description\",\r\n    \"price\": 2120,    \r\n    \"shipping\": \"No\",\r\n    \"quantity\": 112,\r\n    \"category\": \"60ba555f5041b00004d0fcd3\",\r\n    \"subs\": [\"60ba58175041b00004d0fcdd\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{DOMAIN}}/api/product/microsoft-new-laptop",
+							"host": [
+								"{{DOMAIN}}"
+							],
+							"path": [
+								"api",
+								"product",
+								"microsoft-new-laptop"
+							]
+						},
+						"description": "Update product by admin using product slug."
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Product - Admin",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authtoken",
+								"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImFiMGNiMTk5Zjg3MGYyOGUyOTg5YWI0ODFjYzJlNDdlMGUyY2MxOWQiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiTWQuIEFuaXN1ciBSYWhtYW4gUm9ueSIsInBpY3R1cmUiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS0vQU9oMTRHZ20tdVY0OXN0MFJCMVE4U1VKN3dEdkstbV9ScnkwemNzdlRXNFRBdz1zOTYtYyIsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS9tZXJuZWNvbW1lcmNlLTQ2Y2IzIiwiYXVkIjoibWVybmVjb21tZXJjZS00NmNiMyIsImF1dGhfdGltZSI6MTYyMzMxOTkxOCwidXNlcl9pZCI6IlRycUFCZ0J4bVVWRVc5NElJa1VRNGU5WjVFODMiLCJzdWIiOiJUcnFBQmdCeG1VVkVXOTRJSWtVUTRlOVo1RTgzIiwiaWF0IjoxNjIzNDA2NjE0LCJleHAiOjE2MjM0MTAyMTQsImVtYWlsIjoiYW5pc3VycmFobWFucm9ueTNAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZ29vZ2xlLmNvbSI6WyIxMDQ0NzYzNjc5Njk3NjUzMTc3MTgiXSwiZW1haWwiOlsiYW5pc3VycmFobWFucm9ueTNAZ21haWwuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoiZ29vZ2xlLmNvbSJ9fQ.ab0Pfuz53W_Aa9CwIdMDdCf8pQeZUmnG7pdWd_DauR5w1E9SvxXX7jTvOjSAgG3FGmZcmJkcUYjoZ8w4BEN0U_jnhIm1CSB4M46qdgkncsDBAKyuRtjisgUoHgHw4nhgmFuQPn7W_iJxW9kNDkOVP3iKkPlInF74hVqFpApQZBmNTxSdNEbFLfGoPEN5N_tUvby_kAxk6l_mLVp8Xys_65p57OqRm_7_Cs4vShDnNSfRHSZsvyQ1VajuDIGgbXy3gtRqROVN-gLNePRfwhEQwogFBfoYmuGRKsjD4WlmNOw1oc6Czt8-GN6ox2NqUNntDiHlo0rL_HTXvnIwV0L-8g",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{DOMAIN}}/api/product/microsoft-updated-laptop",
+							"host": [
+								"{{DOMAIN}}"
+							],
+							"path": [
+								"api",
+								"product",
+								"microsoft-updated-laptop"
+							]
+						},
+						"description": "Delete product by admin using product slug."
+					},
+					"response": []
+				}
+			],
+			"description": "All `API` related to `Product`."
+		},
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "Get All Categories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{DOMAIN}}/api/categories",
+							"host": [
+								"{{DOMAIN}}"
+							],
+							"path": [
+								"api",
+								"categories"
+							]
+						},
+						"description": "Get all categories."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Category with Products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{DOMAIN}}/api/category/asus",
+							"host": [
+								"{{DOMAIN}}"
+							],
+							"path": [
+								"api",
+								"category",
+								"asus"
+							]
+						},
+						"description": "Get single category with products using slug."
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Subcategories of Particular Category",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{DOMAIN}}/api/category/subs/60ba55435041b00004d0fcd1",
+							"host": [
+								"{{DOMAIN}}"
+							],
+							"path": [
+								"api",
+								"category",
+								"subs",
+								"60ba55435041b00004d0fcd1"
+							]
+						},
+						"description": "Get all subcategories of particular category using category id."
+					},
+					"response": []
+				},
+				{
+					"name": "Create New Category - Admin",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authtoken",
+								"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImFiMGNiMTk5Zjg3MGYyOGUyOTg5YWI0ODFjYzJlNDdlMGUyY2MxOWQiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiTWQuIEFuaXN1ciBSYWhtYW4gUm9ueSIsInBpY3R1cmUiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS0vQU9oMTRHZ20tdVY0OXN0MFJCMVE4U1VKN3dEdkstbV9ScnkwemNzdlRXNFRBdz1zOTYtYyIsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS9tZXJuZWNvbW1lcmNlLTQ2Y2IzIiwiYXVkIjoibWVybmVjb21tZXJjZS00NmNiMyIsImF1dGhfdGltZSI6MTYyMzMxOTkxOCwidXNlcl9pZCI6IlRycUFCZ0J4bVVWRVc5NElJa1VRNGU5WjVFODMiLCJzdWIiOiJUcnFBQmdCeG1VVkVXOTRJSWtVUTRlOVo1RTgzIiwiaWF0IjoxNjIzMzE5OTE4LCJleHAiOjE2MjMzMjM1MTgsImVtYWlsIjoiYW5pc3VycmFobWFucm9ueTNAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZ29vZ2xlLmNvbSI6WyIxMDQ0NzYzNjc5Njk3NjUzMTc3MTgiXSwiZW1haWwiOlsiYW5pc3VycmFobWFucm9ueTNAZ21haWwuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoiZ29vZ2xlLmNvbSJ9fQ.L3cDmM3VzjqKdsIKltTqMPs6JMnMwhcTmqnqSYpOQ8npEd6wOKPao_1J8Mux1XEtS9l1J33NuWh9oE1rP9pUtEokQhSwjHBK1zP4xX_fBC7ktRw0Nek3B6HQJ-JD1xOFy7bJrv-dLbQbIDTuQQhwKLZaBzR7zVol7r08tgQ3oASfZnV4lodh0KK9-x7kYxzXPUlOU3I6H12scdxnMTU68bZa8QlES1oDkDwKBdG0hJIS34iUtuMhr6ZW3CxrEYkuxEy2x-ETItQ5QXGFf9ayTC7-9ix0BQys4ARPst145OjSPJoviZ4XrwcYoC1LWoTMtDcEVZRH_U3637AfGb70CQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \r\n    \"name\": \"New Category\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{DOMAIN}}/api/category",
+							"host": [
+								"{{DOMAIN}}"
+							],
+							"path": [
+								"api",
+								"category"
+							]
+						},
+						"description": "Create new category by admin."
+					},
+					"response": []
+				},
+				{
+					"name": "Update Category - Admin",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "authtoken",
+								"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImFiMGNiMTk5Zjg3MGYyOGUyOTg5YWI0ODFjYzJlNDdlMGUyY2MxOWQiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiTWQuIEFuaXN1ciBSYWhtYW4gUm9ueSIsInBpY3R1cmUiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS0vQU9oMTRHZ20tdVY0OXN0MFJCMVE4U1VKN3dEdkstbV9ScnkwemNzdlRXNFRBdz1zOTYtYyIsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS9tZXJuZWNvbW1lcmNlLTQ2Y2IzIiwiYXVkIjoibWVybmVjb21tZXJjZS00NmNiMyIsImF1dGhfdGltZSI6MTYyMzMxOTkxOCwidXNlcl9pZCI6IlRycUFCZ0J4bVVWRVc5NElJa1VRNGU5WjVFODMiLCJzdWIiOiJUcnFBQmdCeG1VVkVXOTRJSWtVUTRlOVo1RTgzIiwiaWF0IjoxNjIzMzE5OTE4LCJleHAiOjE2MjMzMjM1MTgsImVtYWlsIjoiYW5pc3VycmFobWFucm9ueTNAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZ29vZ2xlLmNvbSI6WyIxMDQ0NzYzNjc5Njk3NjUzMTc3MTgiXSwiZW1haWwiOlsiYW5pc3VycmFobWFucm9ueTNAZ21haWwuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoiZ29vZ2xlLmNvbSJ9fQ.L3cDmM3VzjqKdsIKltTqMPs6JMnMwhcTmqnqSYpOQ8npEd6wOKPao_1J8Mux1XEtS9l1J33NuWh9oE1rP9pUtEokQhSwjHBK1zP4xX_fBC7ktRw0Nek3B6HQJ-JD1xOFy7bJrv-dLbQbIDTuQQhwKLZaBzR7zVol7r08tgQ3oASfZnV4lodh0KK9-x7kYxzXPUlOU3I6H12scdxnMTU68bZa8QlES1oDkDwKBdG0hJIS34iUtuMhr6ZW3CxrEYkuxEy2x-ETItQ5QXGFf9ayTC7-9ix0BQys4ARPst145OjSPJoviZ4XrwcYoC1LWoTMtDcEVZRH_U3637AfGb70CQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \r\n    \"name\": \"Updated Category\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{DOMAIN}}/api/category/new-category",
+							"host": [
+								"{{DOMAIN}}"
+							],
+							"path": [
+								"api",
+								"category",
+								"new-category"
+							]
+						},
+						"description": "Update category by admin using slug."
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Category - Admin",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authtoken",
+								"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImFiMGNiMTk5Zjg3MGYyOGUyOTg5YWI0ODFjYzJlNDdlMGUyY2MxOWQiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiTWQuIEFuaXN1ciBSYWhtYW4gUm9ueSIsInBpY3R1cmUiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS0vQU9oMTRHZ20tdVY0OXN0MFJCMVE4U1VKN3dEdkstbV9ScnkwemNzdlRXNFRBdz1zOTYtYyIsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS9tZXJuZWNvbW1lcmNlLTQ2Y2IzIiwiYXVkIjoibWVybmVjb21tZXJjZS00NmNiMyIsImF1dGhfdGltZSI6MTYyMzMxOTkxOCwidXNlcl9pZCI6IlRycUFCZ0J4bVVWRVc5NElJa1VRNGU5WjVFODMiLCJzdWIiOiJUcnFBQmdCeG1VVkVXOTRJSWtVUTRlOVo1RTgzIiwiaWF0IjoxNjIzMzE5OTE4LCJleHAiOjE2MjMzMjM1MTgsImVtYWlsIjoiYW5pc3VycmFobWFucm9ueTNAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZ29vZ2xlLmNvbSI6WyIxMDQ0NzYzNjc5Njk3NjUzMTc3MTgiXSwiZW1haWwiOlsiYW5pc3VycmFobWFucm9ueTNAZ21haWwuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoiZ29vZ2xlLmNvbSJ9fQ.L3cDmM3VzjqKdsIKltTqMPs6JMnMwhcTmqnqSYpOQ8npEd6wOKPao_1J8Mux1XEtS9l1J33NuWh9oE1rP9pUtEokQhSwjHBK1zP4xX_fBC7ktRw0Nek3B6HQJ-JD1xOFy7bJrv-dLbQbIDTuQQhwKLZaBzR7zVol7r08tgQ3oASfZnV4lodh0KK9-x7kYxzXPUlOU3I6H12scdxnMTU68bZa8QlES1oDkDwKBdG0hJIS34iUtuMhr6ZW3CxrEYkuxEy2x-ETItQ5QXGFf9ayTC7-9ix0BQys4ARPst145OjSPJoviZ4XrwcYoC1LWoTMtDcEVZRH_U3637AfGb70CQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{DOMAIN}}/api/category/updated-category",
+							"host": [
+								"{{DOMAIN}}"
+							],
+							"path": [
+								"api",
+								"category",
+								"updated-category"
+							]
+						},
+						"description": "Delete category by admin using slug."
+					},
+					"response": []
+				}
+			],
+			"description": "All `API` related to `Category`."
+		},
+		{
+			"name": "Sub Category",
+			"item": [
+				{
+					"name": "Get All Sub Categories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{DOMAIN}}/api/subs",
+							"host": [
+								"{{DOMAIN}}"
+							],
+							"path": [
+								"api",
+								"subs"
+							]
+						},
+						"description": "Get all sub categories."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Sub Category  with Products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{DOMAIN}}/api/sub/acer-extensa",
+							"host": [
+								"{{DOMAIN}}"
+							],
+							"path": [
+								"api",
+								"sub",
+								"acer-extensa"
+							]
+						},
+						"description": "Get single sub category with products using slug."
+					},
+					"response": []
+				},
+				{
+					"name": "Create Sub Category - Admin",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authtoken",
+								"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImFiMGNiMTk5Zjg3MGYyOGUyOTg5YWI0ODFjYzJlNDdlMGUyY2MxOWQiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiTWQuIEFuaXN1ciBSYWhtYW4gUm9ueSIsInBpY3R1cmUiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS0vQU9oMTRHZ20tdVY0OXN0MFJCMVE4U1VKN3dEdkstbV9ScnkwemNzdlRXNFRBdz1zOTYtYyIsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS9tZXJuZWNvbW1lcmNlLTQ2Y2IzIiwiYXVkIjoibWVybmVjb21tZXJjZS00NmNiMyIsImF1dGhfdGltZSI6MTYyMzMxOTkxOCwidXNlcl9pZCI6IlRycUFCZ0J4bVVWRVc5NElJa1VRNGU5WjVFODMiLCJzdWIiOiJUcnFBQmdCeG1VVkVXOTRJSWtVUTRlOVo1RTgzIiwiaWF0IjoxNjIzNDAyODQxLCJleHAiOjE2MjM0MDY0NDEsImVtYWlsIjoiYW5pc3VycmFobWFucm9ueTNAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZ29vZ2xlLmNvbSI6WyIxMDQ0NzYzNjc5Njk3NjUzMTc3MTgiXSwiZW1haWwiOlsiYW5pc3VycmFobWFucm9ueTNAZ21haWwuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoiZ29vZ2xlLmNvbSJ9fQ.LpEvgNOtHzlS_YYA9YAuusVE02ZR3x4v1QL2GWe7I4HNhQHmJoupQnHUk8lIE70SCgIF1tu3yjeUck3uNmZ69-s2jgfzXeMXu_KB50l-2cnK36eK-vb6SUgMexYybNuxrJuE4URVeZuO55OZamE1UWu1LNTFjfwR8AU-eH4zKLJjIMXLzXy0uMKrjEDHILDU2i3JRHmqZefqmBoXPrQMZy1QKO9bytw7U5MZwkv3GIJMvr7ZnduLTvy3vqRbjFRmkFSSQSIBIq3WDKyZLn0c5c0V6WBCXuRbyn6EpO_KPtvA6vsYmb5wg1zqY93x-bkaMwBKx9v3gVthydc9jrFKrA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \r\n    \"name\": \"New Sub Category Acer\",\r\n    \"parent\": \"60ba554f5041b00004d0fcd2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{DOMAIN}}/api/sub",
+							"host": [
+								"{{DOMAIN}}"
+							],
+							"path": [
+								"api",
+								"sub"
+							]
+						},
+						"description": "Create sub category by admin using parent category id."
+					},
+					"response": []
+				},
+				{
+					"name": "Update Sub Category - Admin",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "authtoken",
+								"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImFiMGNiMTk5Zjg3MGYyOGUyOTg5YWI0ODFjYzJlNDdlMGUyY2MxOWQiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiTWQuIEFuaXN1ciBSYWhtYW4gUm9ueSIsInBpY3R1cmUiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS0vQU9oMTRHZ20tdVY0OXN0MFJCMVE4U1VKN3dEdkstbV9ScnkwemNzdlRXNFRBdz1zOTYtYyIsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS9tZXJuZWNvbW1lcmNlLTQ2Y2IzIiwiYXVkIjoibWVybmVjb21tZXJjZS00NmNiMyIsImF1dGhfdGltZSI6MTYyMzMxOTkxOCwidXNlcl9pZCI6IlRycUFCZ0J4bVVWRVc5NElJa1VRNGU5WjVFODMiLCJzdWIiOiJUcnFBQmdCeG1VVkVXOTRJSWtVUTRlOVo1RTgzIiwiaWF0IjoxNjIzNDAyODQxLCJleHAiOjE2MjM0MDY0NDEsImVtYWlsIjoiYW5pc3VycmFobWFucm9ueTNAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZ29vZ2xlLmNvbSI6WyIxMDQ0NzYzNjc5Njk3NjUzMTc3MTgiXSwiZW1haWwiOlsiYW5pc3VycmFobWFucm9ueTNAZ21haWwuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoiZ29vZ2xlLmNvbSJ9fQ.LpEvgNOtHzlS_YYA9YAuusVE02ZR3x4v1QL2GWe7I4HNhQHmJoupQnHUk8lIE70SCgIF1tu3yjeUck3uNmZ69-s2jgfzXeMXu_KB50l-2cnK36eK-vb6SUgMexYybNuxrJuE4URVeZuO55OZamE1UWu1LNTFjfwR8AU-eH4zKLJjIMXLzXy0uMKrjEDHILDU2i3JRHmqZefqmBoXPrQMZy1QKO9bytw7U5MZwkv3GIJMvr7ZnduLTvy3vqRbjFRmkFSSQSIBIq3WDKyZLn0c5c0V6WBCXuRbyn6EpO_KPtvA6vsYmb5wg1zqY93x-bkaMwBKx9v3gVthydc9jrFKrA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \r\n    \"name\": \"Updated Sub Category Acer\",\r\n    \"parent\": \"60ba554f5041b00004d0fcd2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{DOMAIN}}/api/sub/new-sub-category-acer",
+							"host": [
+								"{{DOMAIN}}"
+							],
+							"path": [
+								"api",
+								"sub",
+								"new-sub-category-acer"
+							]
+						},
+						"description": "Update sub category by admin using parent category id and sub category slug."
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Sub Category - Admin",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authtoken",
+								"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImFiMGNiMTk5Zjg3MGYyOGUyOTg5YWI0ODFjYzJlNDdlMGUyY2MxOWQiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiTWQuIEFuaXN1ciBSYWhtYW4gUm9ueSIsInBpY3R1cmUiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS0vQU9oMTRHZ20tdVY0OXN0MFJCMVE4U1VKN3dEdkstbV9ScnkwemNzdlRXNFRBdz1zOTYtYyIsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS9tZXJuZWNvbW1lcmNlLTQ2Y2IzIiwiYXVkIjoibWVybmVjb21tZXJjZS00NmNiMyIsImF1dGhfdGltZSI6MTYyMzMxOTkxOCwidXNlcl9pZCI6IlRycUFCZ0J4bVVWRVc5NElJa1VRNGU5WjVFODMiLCJzdWIiOiJUcnFBQmdCeG1VVkVXOTRJSWtVUTRlOVo1RTgzIiwiaWF0IjoxNjIzNDAyODQxLCJleHAiOjE2MjM0MDY0NDEsImVtYWlsIjoiYW5pc3VycmFobWFucm9ueTNAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZ29vZ2xlLmNvbSI6WyIxMDQ0NzYzNjc5Njk3NjUzMTc3MTgiXSwiZW1haWwiOlsiYW5pc3VycmFobWFucm9ueTNAZ21haWwuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoiZ29vZ2xlLmNvbSJ9fQ.LpEvgNOtHzlS_YYA9YAuusVE02ZR3x4v1QL2GWe7I4HNhQHmJoupQnHUk8lIE70SCgIF1tu3yjeUck3uNmZ69-s2jgfzXeMXu_KB50l-2cnK36eK-vb6SUgMexYybNuxrJuE4URVeZuO55OZamE1UWu1LNTFjfwR8AU-eH4zKLJjIMXLzXy0uMKrjEDHILDU2i3JRHmqZefqmBoXPrQMZy1QKO9bytw7U5MZwkv3GIJMvr7ZnduLTvy3vqRbjFRmkFSSQSIBIq3WDKyZLn0c5c0V6WBCXuRbyn6EpO_KPtvA6vsYmb5wg1zqY93x-bkaMwBKx9v3gVthydc9jrFKrA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{DOMAIN}}/api/sub/updated-sub-category-acer",
+							"host": [
+								"{{DOMAIN}}"
+							],
+							"path": [
+								"api",
+								"sub",
+								"updated-sub-category-acer"
+							]
+						},
+						"description": "Delete sub category by admin using sub category slug."
+					},
+					"response": []
+				}
+			],
+			"description": "All `API` of `Sub Category`."
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Get All Orders - Admin",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authtoken",
+								"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImFiMGNiMTk5Zjg3MGYyOGUyOTg5YWI0ODFjYzJlNDdlMGUyY2MxOWQiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiTWQuIEFuaXN1ciBSYWhtYW4gUm9ueSIsInBpY3R1cmUiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS0vQU9oMTRHZ20tdVY0OXN0MFJCMVE4U1VKN3dEdkstbV9ScnkwemNzdlRXNFRBdz1zOTYtYyIsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS9tZXJuZWNvbW1lcmNlLTQ2Y2IzIiwiYXVkIjoibWVybmVjb21tZXJjZS00NmNiMyIsImF1dGhfdGltZSI6MTYyMzMwNjEzNSwidXNlcl9pZCI6IlRycUFCZ0J4bVVWRVc5NElJa1VRNGU5WjVFODMiLCJzdWIiOiJUcnFBQmdCeG1VVkVXOTRJSWtVUTRlOVo1RTgzIiwiaWF0IjoxNjIzMzA2MTM1LCJleHAiOjE2MjMzMDk3MzUsImVtYWlsIjoiYW5pc3VycmFobWFucm9ueTNAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZ29vZ2xlLmNvbSI6WyIxMDQ0NzYzNjc5Njk3NjUzMTc3MTgiXSwiZW1haWwiOlsiYW5pc3VycmFobWFucm9ueTNAZ21haWwuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.Jj4uO--nDmiTLaSLL58CFVQyrPLS_tMAwcQy3FyukE6xwhg9l4I_-krwRVhZ_hg83XNlb3Sogri-M4j1ck5lERJyAA5ECzbMtmAaLKJVCdmMoJRKeSNxktMP2xZqNtO6yePDdyTMl0Rgz7orN4WcSDHHVsEWIuQ2Bfsk2ct7xVsGzIB0oIgt-i8uKB3Qyi_CKSz0QuL258KNTruqRlIWCjyp8h3yLIyjh6fEXlKEyxb2rlZQwq56oUraxyCJN5-8C7ey0nhLf0bT382RvFIDpqBYbyvzyDPriwI66UQ0in9aXL0yh-F2yXPfwS3pJYqIQHIW6sC6ktCY-udhOuT99A",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{DOMAIN}}/api/admin/orders",
+							"host": [
+								"{{DOMAIN}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"orders"
+							]
+						},
+						"description": "Get all orders by admin."
+					},
+					"response": []
+				},
+				{
+					"name": "Change Order Status - Admin",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "authtoken",
+								"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImFiMGNiMTk5Zjg3MGYyOGUyOTg5YWI0ODFjYzJlNDdlMGUyY2MxOWQiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiTWQuIEFuaXN1ciBSYWhtYW4gUm9ueSIsInBpY3R1cmUiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS0vQU9oMTRHZ20tdVY0OXN0MFJCMVE4U1VKN3dEdkstbV9ScnkwemNzdlRXNFRBdz1zOTYtYyIsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS9tZXJuZWNvbW1lcmNlLTQ2Y2IzIiwiYXVkIjoibWVybmVjb21tZXJjZS00NmNiMyIsImF1dGhfdGltZSI6MTYyMzMxNzk3NywidXNlcl9pZCI6IlRycUFCZ0J4bVVWRVc5NElJa1VRNGU5WjVFODMiLCJzdWIiOiJUcnFBQmdCeG1VVkVXOTRJSWtVUTRlOVo1RTgzIiwiaWF0IjoxNjIzMzE3OTc3LCJleHAiOjE2MjMzMjE1NzcsImVtYWlsIjoiYW5pc3VycmFobWFucm9ueTNAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZ29vZ2xlLmNvbSI6WyIxMDQ0NzYzNjc5Njk3NjUzMTc3MTgiXSwiZW1haWwiOlsiYW5pc3VycmFobWFucm9ueTNAZ21haWwuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoiZ29vZ2xlLmNvbSJ9fQ.Abohwgg4hjlBxQ9ujjatvnHePQG-MWMbdF-0HPrjzXvMv0pko5ZkAdVXvv8hureyTYR-X1P4tHRxvYbt8MBv-1UerN8413sxmJ04P_RQ3I6QDd7EhGuEToXcOjAKAPf-VH9kU63Pb2fKFVb4qEoOkX1KQqZ9Wxy9_9WXkATBvPESLx-1a1QSx1nMVDj6vBB1m_-9g4jmVoV-3C1eX-hpVYM-MykVaoAvRbUWza8KYxzcwL63tSakexNEpdTFcYjUBcKqsjvYBmX6Z5KqzAhb80TgPnCKAtVSxR9U4wzswB77J9zl6hx9r0oAbwye3dEyuScVEkjaMtY5HbvEXMa8sg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \r\n    \"orderId\": \"60ba8b91837ff30004771fd8\",\r\n    \"orderStatus\": \"Processing\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{DOMAIN}}/api/admin/order-status",
+							"host": [
+								"{{DOMAIN}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"order-status"
+							]
+						},
+						"description": "Change order status by admin."
+					},
+					"response": []
+				}
+			],
+			"description": "All `API` related to `Admin`."
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Get Current Admin",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authtoken",
+								"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImFiMGNiMTk5Zjg3MGYyOGUyOTg5YWI0ODFjYzJlNDdlMGUyY2MxOWQiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiTWQuIEFuaXN1ciBSYWhtYW4gUm9ueSIsInBpY3R1cmUiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS0vQU9oMTRHZ20tdVY0OXN0MFJCMVE4U1VKN3dEdkstbV9ScnkwemNzdlRXNFRBdz1zOTYtYyIsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS9tZXJuZWNvbW1lcmNlLTQ2Y2IzIiwiYXVkIjoibWVybmVjb21tZXJjZS00NmNiMyIsImF1dGhfdGltZSI6MTYyMzMxNzk3NywidXNlcl9pZCI6IlRycUFCZ0J4bVVWRVc5NElJa1VRNGU5WjVFODMiLCJzdWIiOiJUcnFBQmdCeG1VVkVXOTRJSWtVUTRlOVo1RTgzIiwiaWF0IjoxNjIzMzE3OTc3LCJleHAiOjE2MjMzMjE1NzcsImVtYWlsIjoiYW5pc3VycmFobWFucm9ueTNAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZ29vZ2xlLmNvbSI6WyIxMDQ0NzYzNjc5Njk3NjUzMTc3MTgiXSwiZW1haWwiOlsiYW5pc3VycmFobWFucm9ueTNAZ21haWwuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoiZ29vZ2xlLmNvbSJ9fQ.Abohwgg4hjlBxQ9ujjatvnHePQG-MWMbdF-0HPrjzXvMv0pko5ZkAdVXvv8hureyTYR-X1P4tHRxvYbt8MBv-1UerN8413sxmJ04P_RQ3I6QDd7EhGuEToXcOjAKAPf-VH9kU63Pb2fKFVb4qEoOkX1KQqZ9Wxy9_9WXkATBvPESLx-1a1QSx1nMVDj6vBB1m_-9g4jmVoV-3C1eX-hpVYM-MykVaoAvRbUWza8KYxzcwL63tSakexNEpdTFcYjUBcKqsjvYBmX6Z5KqzAhb80TgPnCKAtVSxR9U4wzswB77J9zl6hx9r0oAbwye3dEyuScVEkjaMtY5HbvEXMa8sg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{DOMAIN}}/api/current-admin",
+							"host": [
+								"{{DOMAIN}}"
+							],
+							"path": [
+								"api",
+								"current-admin"
+							]
+						},
+						"description": "Get the information of recently logged in admin."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Current User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authtoken",
+								"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImFiMGNiMTk5Zjg3MGYyOGUyOTg5YWI0ODFjYzJlNDdlMGUyY2MxOWQiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiTWQuIEFuaXN1ciBSYWhtYW4gUm9ueSIsInBpY3R1cmUiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS0vQU9oMTRHZ2hNNmNqUUtOVFEtYk9MdThaMTdnNTFqUHlZM1NKemltMGNOSmhCQT1zOTYtYyIsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS9tZXJuZWNvbW1lcmNlLTQ2Y2IzIiwiYXVkIjoibWVybmVjb21tZXJjZS00NmNiMyIsImF1dGhfdGltZSI6MTYyMzMxOTM5OSwidXNlcl9pZCI6ImdYWVdFMjBqRDBiS1U0dTUwTXUxNkd5ZFg1SjMiLCJzdWIiOiJnWFlXRTIwakQwYktVNHU1ME11MTZHeWRYNUozIiwiaWF0IjoxNjIzMzE5Mzk5LCJleHAiOjE2MjMzMjI5OTksImVtYWlsIjoibWRhbmlzdXJyYWhtYW5yb255NDlAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZ29vZ2xlLmNvbSI6WyIxMTA2NDQyODQ0OTM0NjE3NDM4MjciXSwiZW1haWwiOlsibWRhbmlzdXJyYWhtYW5yb255NDlAZ21haWwuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoiZ29vZ2xlLmNvbSJ9fQ.IiYVgJ5N0QWqqEB-8w7hEm3Kw21kRs1o1eDqSFI2tw9pVDk3TeJKXneGbjkhyUtYxSQJscApHbcTYLXGsxwUc1XX6xUTmF-iG1U4QLvtie8LMNkaboYXYNACZGZjhGIsuXophpzJkG7gfR6vbcMYV2vXl9AlklOeLrBoJLx2lOcjPc799I4lySKOl0fjfCJi86jxKLgYTJHndbTQpAVHRlzbzKKedc8TIxmHSyqYY6Q8XUICcB53KKrstSHyj7nK-f6QyeXHuea9l4zxYBhvlYYYlpNjn_lVpTolC3xjGRG-9Bx-SBHmrrO7s8NlpMaPUADz5HKaURlLr2gUvaTuEQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{DOMAIN}}/api/current-user",
+							"host": [
+								"{{DOMAIN}}"
+							],
+							"path": [
+								"api",
+								"current-user"
+							]
+						},
+						"description": "Get the information of recently logged in user."
+					},
+					"response": []
+				}
+			],
+			"description": "All `API` related to `Authentication`."
+		},
+		{
+			"name": "Coupon",
+			"item": [
+				{
+					"name": "Get All Coupons",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{DOMAIN}}/api/coupons",
+							"host": [
+								"{{DOMAIN}}"
+							],
+							"path": [
+								"api",
+								"coupons"
+							]
+						},
+						"description": "Get all coupons."
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Coupon - Admin",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authtoken",
+								"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImFiMGNiMTk5Zjg3MGYyOGUyOTg5YWI0ODFjYzJlNDdlMGUyY2MxOWQiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiTWQuIEFuaXN1ciBSYWhtYW4gUm9ueSIsInBpY3R1cmUiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS0vQU9oMTRHZ20tdVY0OXN0MFJCMVE4U1VKN3dEdkstbV9ScnkwemNzdlRXNFRBdz1zOTYtYyIsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS9tZXJuZWNvbW1lcmNlLTQ2Y2IzIiwiYXVkIjoibWVybmVjb21tZXJjZS00NmNiMyIsImF1dGhfdGltZSI6MTYyMzMxOTkxOCwidXNlcl9pZCI6IlRycUFCZ0J4bVVWRVc5NElJa1VRNGU5WjVFODMiLCJzdWIiOiJUcnFBQmdCeG1VVkVXOTRJSWtVUTRlOVo1RTgzIiwiaWF0IjoxNjIzMzk4MTY4LCJleHAiOjE2MjM0MDE3NjgsImVtYWlsIjoiYW5pc3VycmFobWFucm9ueTNAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZ29vZ2xlLmNvbSI6WyIxMDQ0NzYzNjc5Njk3NjUzMTc3MTgiXSwiZW1haWwiOlsiYW5pc3VycmFobWFucm9ueTNAZ21haWwuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoiZ29vZ2xlLmNvbSJ9fQ.maOMMLoitEPd3Iz48xhFvKZYCXMLrm1lxA1MMPZlGiWpd4CQxp9unA9bzmxoX0pMW4PwsZ4FC4ed9ZDXkjiFOIQvMnosrxn9dwNF7XXgjkTIgjMnqgfaXL-XXZ_vkRHGK87mN-wDiG39gmBvk1bICSBEUhsgJGfXUUGp-Lzeob5OC6cDFwazAn6B9JHQ7UiRCVDJwlxtn1tzX9nXuX9YRF3BCpDJVUO4v2BBr_KZCHUEvn9ryOIjQkzcaJT6y2Z_MFSZcrmvP2IXnHXOn-FaqpIFOvsc7vbVQy-CQgtHbLgCip7WRXAxT3O9GsBaFspoSypTI4kmWLvhhC8lwTyggg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{DOMAIN}}/api/coupon/60c31a98b2a2d841b41777db",
+							"host": [
+								"{{DOMAIN}}"
+							],
+							"path": [
+								"api",
+								"coupon",
+								"60c31a98b2a2d841b41777db"
+							]
+						},
+						"description": "Delete coupon by admin using coupon id."
+					},
+					"response": []
+				}
+			],
+			"description": "All `API` related to `Coupon`."
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Get All Orders of User",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authtoken",
+								"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImFiMGNiMTk5Zjg3MGYyOGUyOTg5YWI0ODFjYzJlNDdlMGUyY2MxOWQiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vbWVybmVjb21tZXJjZS00NmNiMyIsImF1ZCI6Im1lcm5lY29tbWVyY2UtNDZjYjMiLCJhdXRoX3RpbWUiOjE2MjMzMTA3NDMsInVzZXJfaWQiOiJnWFlXRTIwakQwYktVNHU1ME11MTZHeWRYNUozIiwic3ViIjoiZ1hZV0UyMGpEMGJLVTR1NTBNdTE2R3lkWDVKMyIsImlhdCI6MTYyMzMxMDc0MywiZXhwIjoxNjIzMzE0MzQzLCJlbWFpbCI6Im1kYW5pc3VycmFobWFucm9ueTQ5QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7ImVtYWlsIjpbIm1kYW5pc3VycmFobWFucm9ueTQ5QGdtYWlsLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6InBhc3N3b3JkIn19.ZPxakvrQSH-49kWS8ZJk1jXLHTEokQjob3-6k639-oXHh84_e95qG07asrpYKZeii8-FzOIMXcPhSMvxM2GRiyM693MUBoQ_UNDYMLZojZ3qiiapHR_2oDSKQl4j2WIY7frhaB-lxCtmH41EN2Kt0bZ7dZLDoa9yYpfxpPqHY-HVL8hzBQhVmtOzLoVvFR77JiMq7S5-xfdSb5XFlEYuG6WTO0IP1afbj4Kdkpy9hQueN-UTq6pOvHSCLVjEnYaiSzgY-p7dI65A34OEqRDYnpYUgCia66E4M3obhNvPVtRuAt4ImSnakEMAuCX8IKCotg_WejndnT2qn1TGB8ZYXg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{DOMAIN}}/api/user/orders",
+							"host": [
+								"{{DOMAIN}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"orders"
+							]
+						},
+						"description": "Get all the orders of a particular user."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Wishlist of User",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authtoken",
+								"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImFiMGNiMTk5Zjg3MGYyOGUyOTg5YWI0ODFjYzJlNDdlMGUyY2MxOWQiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vbWVybmVjb21tZXJjZS00NmNiMyIsImF1ZCI6Im1lcm5lY29tbWVyY2UtNDZjYjMiLCJhdXRoX3RpbWUiOjE2MjMzMTA3NDMsInVzZXJfaWQiOiJnWFlXRTIwakQwYktVNHU1ME11MTZHeWRYNUozIiwic3ViIjoiZ1hZV0UyMGpEMGJLVTR1NTBNdTE2R3lkWDVKMyIsImlhdCI6MTYyMzMxMDc0MywiZXhwIjoxNjIzMzE0MzQzLCJlbWFpbCI6Im1kYW5pc3VycmFobWFucm9ueTQ5QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7ImVtYWlsIjpbIm1kYW5pc3VycmFobWFucm9ueTQ5QGdtYWlsLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6InBhc3N3b3JkIn19.ZPxakvrQSH-49kWS8ZJk1jXLHTEokQjob3-6k639-oXHh84_e95qG07asrpYKZeii8-FzOIMXcPhSMvxM2GRiyM693MUBoQ_UNDYMLZojZ3qiiapHR_2oDSKQl4j2WIY7frhaB-lxCtmH41EN2Kt0bZ7dZLDoa9yYpfxpPqHY-HVL8hzBQhVmtOzLoVvFR77JiMq7S5-xfdSb5XFlEYuG6WTO0IP1afbj4Kdkpy9hQueN-UTq6pOvHSCLVjEnYaiSzgY-p7dI65A34OEqRDYnpYUgCia66E4M3obhNvPVtRuAt4ImSnakEMAuCX8IKCotg_WejndnT2qn1TGB8ZYXg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{DOMAIN}}/api/user/wishlist",
+							"host": [
+								"{{DOMAIN}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"wishlist"
+							]
+						},
+						"description": "Get wishlist of user."
+					},
+					"response": []
+				},
+				{
+					"name": "Add to Wishlist",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authtoken",
+								"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImFiMGNiMTk5Zjg3MGYyOGUyOTg5YWI0ODFjYzJlNDdlMGUyY2MxOWQiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiTWQuIEFuaXN1ciBSYWhtYW4gUm9ueSIsInBpY3R1cmUiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS0vQU9oMTRHZ2hNNmNqUUtOVFEtYk9MdThaMTdnNTFqUHlZM1NKemltMGNOSmhCQT1zOTYtYyIsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS9tZXJuZWNvbW1lcmNlLTQ2Y2IzIiwiYXVkIjoibWVybmVjb21tZXJjZS00NmNiMyIsImF1dGhfdGltZSI6MTYyMzQwNzA4MiwidXNlcl9pZCI6ImdYWVdFMjBqRDBiS1U0dTUwTXUxNkd5ZFg1SjMiLCJzdWIiOiJnWFlXRTIwakQwYktVNHU1ME11MTZHeWRYNUozIiwiaWF0IjoxNjIzNDA3MDgyLCJleHAiOjE2MjM0MTA2ODIsImVtYWlsIjoibWRhbmlzdXJyYWhtYW5yb255NDlAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZ29vZ2xlLmNvbSI6WyIxMTA2NDQyODQ0OTM0NjE3NDM4MjciXSwiZW1haWwiOlsibWRhbmlzdXJyYWhtYW5yb255NDlAZ21haWwuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoiZ29vZ2xlLmNvbSJ9fQ.mUqE_fzDPZGW7-UrDIemZsCL_mDm4wChx1Hw5PyJuSvqReBjmEK2dfKx9-D-Qt43pAv2w6MgBdTOwaIlwMsgwvAbsX6WxcWB2VYJIoer6DRtHd4yntUxrooGwid6pTik8Ncmnk-OuzaGYupF8WSlkWc5wZMGYTRTTohBl8IIOIBwEbwofx1ikQBtE2cKZF9nJl2U_Yvm7EkGb2aIlFf8706gOudTZ_S3QJLX7p_0ls2vj1pqwOs7sXA6UX1NKNKgKdCRgRHTy1TnKhb5F3fX3uP98j1bE8vBBkIGEUTG3VbGcP74H_iMj36KGcp9aDhiQKBCwslWQ8RKNa2d4dUcUg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\": \"60ba8241837ff30004771fb4\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{DOMAIN}}/api/user/wishlist",
+							"host": [
+								"{{DOMAIN}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"wishlist"
+							]
+						},
+						"description": "Add product to wishlist using product id in request body."
+					},
+					"response": []
+				},
+				{
+					"name": "Remove from Wishlist",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "authtoken",
+								"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImFiMGNiMTk5Zjg3MGYyOGUyOTg5YWI0ODFjYzJlNDdlMGUyY2MxOWQiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiTWQuIEFuaXN1ciBSYWhtYW4gUm9ueSIsInBpY3R1cmUiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS0vQU9oMTRHZ2hNNmNqUUtOVFEtYk9MdThaMTdnNTFqUHlZM1NKemltMGNOSmhCQT1zOTYtYyIsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS9tZXJuZWNvbW1lcmNlLTQ2Y2IzIiwiYXVkIjoibWVybmVjb21tZXJjZS00NmNiMyIsImF1dGhfdGltZSI6MTYyMzQwNzA4MiwidXNlcl9pZCI6ImdYWVdFMjBqRDBiS1U0dTUwTXUxNkd5ZFg1SjMiLCJzdWIiOiJnWFlXRTIwakQwYktVNHU1ME11MTZHeWRYNUozIiwiaWF0IjoxNjIzNDA3MDgyLCJleHAiOjE2MjM0MTA2ODIsImVtYWlsIjoibWRhbmlzdXJyYWhtYW5yb255NDlAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZ29vZ2xlLmNvbSI6WyIxMTA2NDQyODQ0OTM0NjE3NDM4MjciXSwiZW1haWwiOlsibWRhbmlzdXJyYWhtYW5yb255NDlAZ21haWwuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoiZ29vZ2xlLmNvbSJ9fQ.mUqE_fzDPZGW7-UrDIemZsCL_mDm4wChx1Hw5PyJuSvqReBjmEK2dfKx9-D-Qt43pAv2w6MgBdTOwaIlwMsgwvAbsX6WxcWB2VYJIoer6DRtHd4yntUxrooGwid6pTik8Ncmnk-OuzaGYupF8WSlkWc5wZMGYTRTTohBl8IIOIBwEbwofx1ikQBtE2cKZF9nJl2U_Yvm7EkGb2aIlFf8706gOudTZ_S3QJLX7p_0ls2vj1pqwOs7sXA6UX1NKNKgKdCRgRHTy1TnKhb5F3fX3uP98j1bE8vBBkIGEUTG3VbGcP74H_iMj36KGcp9aDhiQKBCwslWQ8RKNa2d4dUcUg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{DOMAIN}}/api/user/wishlist/60ba8241837ff30004771fb4",
+							"host": [
+								"{{DOMAIN}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"wishlist",
+								"60ba8241837ff30004771fb4"
+							]
+						},
+						"description": "Remove product from wishlist using product id in parameter."
+					},
+					"response": []
+				}
+			],
+			"description": "All `API` related to `User`."
+		}
+	]
+}
