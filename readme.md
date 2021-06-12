@@ -2,13 +2,13 @@
 
 > Complete Ecommerce site built with Node.js, React, Redux, Express.js, MongoDB, Firebase
 
-### Live Project Link: [https://ronymernecommerce.herokuapp.com/](https://ronymernecommerce.herokuapp.com/)
+### Live Project Link: [https://ronymernecommerce.herokuapp.com](https://ronymernecommerce.herokuapp.com)
 
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/TiD1rAXVbB4/0.jpg)](https://ronymernecommerce.herokuapp.com/)
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/i4M2uKBNN3U/0.jpg)](https://ronymernecommerce.herokuapp.com/)
 
-### Project Demo Video: [https://youtu.be/TiD1rAXVbB4](https://youtu.be/TiD1rAXVbB4)
+### Project Demo Video: [https://youtu.be/i4M2uKBNN3U](https://youtu.be/i4M2uKBNN3U)
 
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/TiD1rAXVbB4/0.jpg)](https://youtu.be/TiD1rAXVbB4)
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/i4M2uKBNN3U/0.jpg)](https://youtu.be/i4M2uKBNN3U)
 
 ### Project API: [https://documenter.getpostman.com/view/13756972/TzeTHUbs](https://documenter.getpostman.com/view/13756972/TzeTHUbs)
 
